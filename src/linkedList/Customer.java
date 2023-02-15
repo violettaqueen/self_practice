@@ -1,11 +1,15 @@
 package linkedList;
 
+import lombok.Data;
+
+@Data
 public class Customer {
 
     String name;
     String lastName;
     String email;
     String phoneNumber;
+
 
     public Customer(String name, String lastName, String email, String phoneNumber) {
         this.name = name;
