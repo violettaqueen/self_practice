@@ -12,6 +12,7 @@ public class BirthdayCandles {
         List<Integer> list = Arrays.asList(4, 4, 1, 3);
         System.out.println(birthdayCandles(candles));
         System.out.println(birthdayCake2(list));
+        System.out.println(birthdayCakePassed(list));
     }
 
     public static int birthdayCandles(int[] arr) {
@@ -20,8 +21,12 @@ public class BirthdayCandles {
         int max = 0;
         for (int i = 0; i < arr.length; i++) {
             max = Math.max(arr[i], max);
-            if (max == arr[i])
+            if (max == arr[i]){
                 count++;
+            }else{
+                continue;
+            }
+
         }
         return count;
     }
@@ -38,5 +43,23 @@ public class BirthdayCandles {
                 count++;
         }
         return count;
+    }
+    public static int birthdayCakePassed(List<Integer>list){
+
+        int max=0;
+        int count =0;
+
+        for (Integer each : list){
+
+            if(each==max){
+                count++;
+            }
+            if (each>max){
+                count=1;
+                max=each;
+            }
+        }
+        return count;
+
     }
 }
