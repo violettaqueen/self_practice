@@ -18,7 +18,7 @@ public class Fibonacci {
     public static void allFib(int n){
 
         for (int i = 0; i < n; i++) {
-            System.out.print(i+":"+ fibonacci(i)+" ");
+            System.out.println(i+":"+ fibonacci(i)+" ");
         }
     }
 }
