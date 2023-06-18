@@ -8,8 +8,10 @@ public class LexicographicallyLarger {
         String word2 = "java";
         int d = word.compareTo(word2);
 
-        if (d > 0) {
+        if(word.compareTo(word2)<=0)
+            System.out.println("No");
+        else
             System.out.println("Yes");
-        }
+
     }
 }
